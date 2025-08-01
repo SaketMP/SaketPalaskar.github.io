@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.querySelector('[data-form]');
   const formInputs = form ? form.querySelectorAll('[data-form-input]') : [];
   const submitBtn = document.querySelector('[data-form-btn]');
-
+  
   if (form && formInputs.length && submitBtn) {
     // Enable button only if form is valid
     formInputs.forEach(input => {
@@ -42,13 +42,33 @@ document.addEventListener('DOMContentLoaded', () => {
         submitBtn.disabled = !form.checkValidity();
       });
     });
-
+  
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-
-      emailjs.sendForm('service_k78pom8', 'template_a245j3u', form)
+  
+      // Gather data from form
+      const name = form.querySelector('input[name="name"]').value;
+      const email = form.querySelector('input[name="email"]').value;
+      const message = form.querySelector('textarea[name="message"]').value;
+  
+      // 1. Send notification email to yourself (admin template)
+      emailjs.sendForm('service_k78pom8', 'template_s1unvwh', form)
         .then(() => {
           toastr.success('Message sent successfully!');
+          
+          // 2. Send auto-reply confirmation to customer (customer template)
+          emailjs.send('service_k78pom8', 'template_53j9v61', {
+            to_email: email,  // matches template var {{to_email}}
+            name: name,
+            message: message
+          })
+          .then(() => {
+            console.log('Auto-reply email sent to user.');
+          })
+          .catch((err) => {
+            console.error('Failed to send auto-reply email:', err);
+          });
+  
           form.reset();
           submitBtn.disabled = true;
         })
@@ -58,6 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
   }
+  
 
   // Testimonials modal (omitted here for brevity, keep your existing implementation)
 
