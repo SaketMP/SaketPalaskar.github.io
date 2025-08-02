@@ -1,7 +1,7 @@
 'use strict';
 
 // Initialize EmailJS
-emailjs.init('8pWLTJvdnntz5YyUO');
+emailjs.init('sZurgCdH4QltQhGG_');
 
 // Utility function to toggle 'active' class
 const toggleActive = (elem) => elem.classList.toggle('active');
@@ -49,11 +49,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const email = form.querySelector('input[name="email"]').value;
       const message = form.querySelector('textarea[name="message"]').value;
   
-      emailjs.sendForm('service_k78pom8', 'template_s1unvwh', form)
+      emailjs.sendForm('service_mzvllsc', 'template_kdiv0he', form)
         .then(() => {
           toastr.success('Message sent successfully!');
           
-          emailjs.send('service_k78pom8', 'template_53j9v61', {
+          emailjs.send('service_mzvllsc', 'template_dm1rw5e',{
             to_email: email,
             name: name,
             message: message
