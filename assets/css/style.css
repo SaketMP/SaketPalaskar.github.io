@@ -3262,7 +3262,7 @@ section[data-form-section] .form-btn ion-icon {
 /* Custom Pagination */
 
 .carousel-pagination {
-    bottom: -10px !important;
+    bottom: 10px !important;
     position: relative !important;
     text-align: center !important;
     margin-top: 40px !important;
