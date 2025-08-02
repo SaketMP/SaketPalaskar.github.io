@@ -1,633 +1,955 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Saket - Personal Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Saket - Personal Portfolio</title>
 
-  <!-- Updated EmailJS SDK -->
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <!-- Updated EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-  <!-- jQuery (optional if you use jQuery) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- jQuery (optional if you use jQuery) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-  <!-- toastr CSS and JS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <!-- toastr CSS and JS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
-  <!-- favicon -->
-  <link rel="shortcut icon" href="./assets/images/jason-memoji.png" type="image/png" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./assets/images/jason-memoji.png" type="image/png" />
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 </head>
+
 <body>
 
-  <main>
-    <!-- Sidebar -->
-    <aside class="sidebar" data-sidebar>
-      <div class="sidebar-info">
-        <figure class="avatar-box">
-          <img src="./assets/images/jason-memoji.png" alt="Jason" width="80" />
-        </figure>
-        <div class="info-content">
-          <h1 class="name" title="Jason Tang">Saket Palaskar</h1>
-          <p class="title">Business Developer</p>
-        </div>
-        <button class="info_more-btn" data-sidebar-btn>
+    <main>
+        <!-- Sidebar -->
+        <aside class="sidebar" data-sidebar>
+            <div class="sidebar-info">
+                <figure class="avatar-box">
+                    <img src="./assets/images/jason-memoji.png" alt="Jason" width="80" />
+                </figure>
+                <div class="info-content">
+                    <h1 class="name" title="Jason Tang">Saket Palaskar</h1>
+                    <p class="title">Business Developer</p>
+                </div>
+                <button class="info_more-btn" data-sidebar-btn>
           <span>Show Contacts</span>
           <ion-icon name="chevron-down"></ion-icon>
         </button>
-      </div>
-
-      <div class="sidebar-info_more">
-        <div class="separator"></div>
-        <ul class="contacts-list">
-          <li class="contact-item">
-            <div class="icon-box"><ion-icon name="mail-outline"></ion-icon></div>
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-              <a href="mailto:saketpalaskar@gmail.com " class="contact-link">saketpalaskar@gmail.com </a>
             </div>
-          </li>
 
-          <li class="contact-item">
-            <div class="icon-box"><ion-icon name="location-outline"></ion-icon></div>
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-              <address>Lille, France </address>
+            <div class="sidebar-info_more">
+                <div class="separator"></div>
+                <ul class="contacts-list">
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="mail-outline"></ion-icon>
+                        </div>
+                        <div class="contact-info">
+                            <p class="contact-title">Email</p>
+                            <a href="mailto:saketpalaskar@gmail.com " class="contact-link">saketpalaskar@gmail.com </a>
+                        </div>
+                    </li>
+
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="location-outline"></ion-icon>
+                        </div>
+                        <div class="contact-info">
+                            <p class="contact-title">Location</p>
+                            <address>Lille, France </address>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="separator"></div>
+                <ul class="social-list">
+                    <li class="social-item">
+                        <a href="https://github.com/SaketMP/" class="social-link" target="_blank">
+                            <ion-icon name="logo-github"></ion-icon>
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a href="https://www.linkedin.com/in/saketpalaskar/" class="social-link" target="_blank">
+                            <ion-icon name="logo-linkedin"></ion-icon>
+                        </a>
+                    </li>
+                </ul>
             </div>
-          </li>
-        </ul>
+        </aside>
 
-        <div class="separator"></div>
-        <ul class="social-list">
-          <li class="social-item"><a href="https://github.com/jasontang" class="social-link" target="_blank"><ion-icon name="logo-github"></ion-icon></a></li>
-          <li class="social-item"><a href="https://linkedin.com/in/jasontang" class="social-link" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-          <li class="social-item"><a href="https://tiktok.com/@jasontang" class="social-link" target="_blank"><ion-icon name="logo-tiktok"></ion-icon></a></li>
-          <li class="social-item"><a href="https://discord.com/users/yourdiscordid" class="social-link" target="_blank"><ion-icon name="logo-discord"></ion-icon></a></li>
-        </ul>
-      </div>
-    </aside>
+        <!-- Main content -->
+        <div class="main-content">
+            <!-- Navbar -->
+            <nav class="navbar">
+                <ul class="navbar-list">
+                    <li class="navbar-item"><button class="navbar-link active" data-nav-link>About</button></li>
+                    <li class="navbar-item"><button class="navbar-link" data-nav-link>Resume</button></li>
+                    <li class="navbar-item"><button class="navbar-link" data-nav-link>Portfolio</button></li>
+                    <li class="navbar-item"><button class="navbar-link" data-nav-link>Contact</button></li>
+                </ul>
+            </nav>
 
-    <!-- Main content -->
-    <div class="main-content">
-      <!-- Navbar -->
-      <nav class="navbar">
-        <ul class="navbar-list">
-          <li class="navbar-item"><button class="navbar-link active" data-nav-link>About</button></li>
-          <li class="navbar-item"><button class="navbar-link" data-nav-link>Resume</button></li>
-          <li class="navbar-item"><button class="navbar-link" data-nav-link>Portfolio</button></li>
-          <li class="navbar-item"><button class="navbar-link" data-nav-link>Contact</button></li>
-        </ul>
-      </nav>
+            <!-- Article Section -->
+            <article data-page="about" class="active">
+                <header>
+                    <h3 class="h2 article-title"></h3>
+                </header>
 
-      <!-- Article Section -->
-      <article data-page="about" class="active">
-        <header>
-          <h2 class="h2 article-title">👋 Hello!</h2>
-        </header>
+                <section class="about-text">
+                    <p>
+                        <h2>Hello, Bonjour, Namaste! </h2> I’m Saket — the kind of guy who can cold-call a CEO, pitch in Paris, and still find time to turn coffee chats into client wins. I connect faster than Wi-Fi and close smoother than your favorite luxury
+                        campaign — sales, marketing, or a bit of both.
+                    </p>
+                    <p>
+                        Backed by a global business degree and battle-tested in B2B sales trenches across India, Europe, the US, and the Middle East, I’ve juggled 40+ SME accounts, chased decision-makers across time zones, and delivered strategic work for brands like Nike, Dior,
+                        Ferrari x Belmond, and Kering — plus consulting projects with Sia Partners, Capgemini, BearingPoint, Aliiancy (Amazon), TOLEMUS, and SAP to sharpen the edge.
+                    </p>
+                    <p>
+                        Whether it’s reactivating cold leads, launching in new markets, or optimizing sales pipelines, I turn strategy into traction and data into deals.
+                    </p>
+                    <p>
+                        I speak English and Sales fluently with learning French fluently — but ROI has always been my native tongue.
+                    </p>
+                </section>
 
-        <section class="about-text">
-          <p>
-            I'm Saket, passionate about driving business growth and delivering value through data-driven strategy and innovative marketing. With experience spanning B2B and B2C environments across India and Europe, I specialize in business development, client relationship management, and strategic lead generation. My recent roles at Seagull Enterprises and Infuse Media have enabled me to collaborate with digital marketing teams, onboard SME clients, and execute high-impact outreach campaigns that accelerated revenue growth and brand visibility.
-          </p>
-        
-          <p>
-            I thrive in multicultural, dynamic teams—whether developing international go-to-market strategies, designing CRM campaigns for luxury brands, or leading market research projects. Outside of work, I'm a language enthusiast and avid traveler, always seeking new perspectives and cultural insights to fuel creativity in my professional journey. Let's connect to explore opportunities or share ideas about business, strategy, or marketing innovation.
-          </p>
-        </section>
-        
+                <!--
+                  - service
+                -->
+
+                <section class="service">
+                    <h3 class="h3 service-title">My Other Side</h3>
+
+                    <!-- Swiper Container -->
+                    <div class="swiper service-carousel">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="service-item" data-service="social-events" style="background-image: url('./assets/images/SocialEvents.jpeg');">
+                                    <div class="service-content-box">
+                                        <h4 class="h4 service-item-title creative-title">Social Events & Cause</h4>
+                                    </div>
+                                    <div class="service-overlay">
+                                        <ion-icon name="play-circle-outline"></ion-icon>
+                                        <span>View Details</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="service-item" data-service="volunteering" style="background-image: url('./assets/images/Dart_volunterring.jpeg');">
+                                    <div class="service-content-box">
+                                        <h4 class="h4 service-item-title creative-title">Volunteering</h4>
+                                    </div>
+                                    <div class="service-overlay">
+                                        <ion-icon name="images-outline"></ion-icon>
+                                        <span>View Details</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="service-item" data-service="marshals" style="background-image: url('./assets/images/Marshallsbg.jpeg');">
+                                    <div class="service-content-box">
+                                        <h4 class="h4 service-item-title creative-title">Marshals Football Club</h4>
+                                    </div>
+                                    <div class="service-overlay">
+                                        <ion-icon name="football-outline"></ion-icon>
+                                        <span>View Details</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Navigation arrows -->
+                        <div class="swiper-button-next carousel-next"></div>
+                        <div class="swiper-button-prev carousel-prev"></div>
+
+                        <!-- Pagination -->
+                        <div class="swiper-pagination carousel-pagination"></div>
+                    </div>
+                </section>
+
+                <!-- Service Modal Container -->
+                <div class="service-modal-container" id="serviceModal">
+                    <div class="service-overlay-bg"></div>
+                    <div class="service-modal">
+                        <button class="service-modal-close">
+            <ion-icon name="close-outline"></ion-icon>
+        </button>
+                        <div class="service-modal-content" id="modalContent">
+                            <!-- Content will be dynamically inserted here -->
+                        </div>
+                    </div>
+                </div>
 
 
-        <!--
-          - service
-        -->
 
-        <section class="service">
 
-          <h3 class="h3 service-title">What I'm Doing</h3>
-        
-          <ul class="service-list">
-        
-            <li class="service-item">
-              <div class="service-icon-box">
-                <img src="./assets/images/icons8-study-50.png" alt="study icon" width="40">
-              </div>
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Studying</h4>
-                <p class="service-item-text">
-                  Currently pursuing a Masters in Strategy, Organisation and Consulting at EDHEC Business School, deepening expertise in international business, strategy, and market research. Actively engaged in hands-on projects with global brands across Europe and Asia.
-                </p>
-              </div>
-            </li>
-        
-            <li class="service-item">
-              <div class="service-icon-box">
-                <img src="./assets/images/icons8-web-50.png" alt="business development icon" width="40">
-              </div>
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Business Development</h4>
-                <p class="service-item-text">
-                  Supporting growth for businesses by leading end-to-end client acquisition, driving digital marketing campaigns, and managing client portfolios. Experienced in B2B and B2C outreach, sales operations, and elevating brand visibility through data-driven strategies.
-                </p>
-              </div>
-            </li>
-        
-            <li class="service-item">
-              <div class="service-icon-box">
-                <img src="./assets/images/icons8-music-50.png" alt="projects icon" width="40">
-              </div>
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Marketing Projects</h4>
-                <p class="service-item-text">
-                  Collaborating with international teams on consulting and brand strategy projects for luxury clients—recently for Dior, Kering, Ferrari x Belmond, and Nike. Focus areas include CRM, market entry, and growth strategy.
-                </p>
-              </div>
-            </li>
-        
-            <li class="service-item">
-              <div class="service-icon-box">
-                <img src="./assets/images/icons8-soccer-50.png" alt="skills icon" width="40">
-              </div>
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Professional Upskilling</h4>
-                <p class="service-item-text">
-                  Expanding technical and professional skills in digital marketing, CRM tools (Salesforce, HubSpot), and advanced data analysis. Fluent in English and French (intermediate), with basic German.
-                </p>
-              </div>
-            </li>
-        
-          </ul>
-        
-        </section>
-        
-        <!--
+
+
+                <!-- Service Modals -->
+                <div class="service-modal-container" id="serviceModal">
+                    <div class="service-overlay-bg"></div>
+                    <div class="service-modal">
+                        <button class="service-modal-close">
+            <ion-icon name="close-outline"></ion-icon>
+        </button>
+                        <div class="service-modal-content" id="modalContent">
+                            <!-- Content will be dynamically inserted here -->
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <!--
           - clients
         -->
 
-        <section class="clients">
+                <!-- <section class="clients">
 
-          <h3 class="h3 clients-title">Worked with</h3>
+                    <h3 class="h3 clients-title">Worked with</h3>
 
-          <ul class="clients-list has-scrollbar">
+                    <ul class="clients-list has-scrollbar">
 
-            <li class="clients-item">
-              <a href="https://www.commbank.com.au/">
-                <img src="./assets/images/cba.png" alt="client logo">
-              </a>
-            </li>
+                        <li class="clients-item">
+                            <a href="https://www.commbank.com.au/">
+                                <img src="./assets/images/cba.png" alt="client logo">
+                            </a>
+                        </li>
 
-            <li class="clients-item">
-              <a href="https://www.infosys.com/">
-                <img src="./assets/images/Infosys_logo.svg.png" alt="client logo">
-              </a>
-            </li>
+                        <li class="clients-item">
+                            <a href="https://www.infosys.com/">
+                                <img src="./assets/images/Infosys_logo.svg.png" alt="client logo">
+                            </a>
+                        </li>
 
-            <li class="clients-item">
-              <a href="https://alchemytuition.com.au/">
-                <img src="./assets/images/alchemy300.png" alt="client logo">
-              </a>
-            </li>
+                        <li class="clients-item">
+                            <a href="https://alchemytuition.com.au/">
+                                <img src="./assets/images/alchemy300.png" alt="client logo">
+                            </a>
+                        </li>
 
-            <li class="clients-item">
-              <a href="https://maxbrenner.com.au/">
-                <img src="./assets/images/max-brenner.png" alt="client logo">
-              </a>
-            </li>
+                        <li class="clients-item">
+                            <a href="https://maxbrenner.com.au/">
+                                <img src="./assets/images/max-brenner.png" alt="client logo">
+                            </a>
+                        </li>
 
-          </ul>
+                    </ul>
 
-        </section>
-      </article>
+                </section> -->
+            </article>
 
-      <article data-page="resume">
-        <header><h2 class="article-title">Resume</h2></header>
-        <header>
-          <h2 class="h2 article-title">📝 Resume</h2>
-        </header>
-        <section class="timeline">
+            <article data-page="resume">
+                <header>
+                    <h2 class="article-title">Resume</h2>
+                </header>
+                <header>
+                    <h2 class="h2 article-title">📝 Resume</h2>
+                </header>
+                <section class="timeline">
 
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
+                    <div class="title-wrapper">
+                        <div class="icon-box">
+                            <ion-icon name="book-outline"></ion-icon>
+                        </div>
 
-            <h3 class="h3">Experience</h3>
-          </div>
+                        <h3 class="h3">Experience</h3>
+                    </div>
 
-          <ol class="timeline-list">
+                    <ol class="timeline-list">
 
-            <li class="timeline-item">
-              <h4 class="h4">Seagull Enterprises, India</h4>
-              <h5 class="h5 timeline-item-title">Business Development Executive</h5>
-              <span>Mar 2023 – Jun 2024</span>
-              <p class="timeline-text">
-                • Collaborated with digital marketing teams to drive 1.7x YoY lead growth via social and email campaigns.<br>
-                • Managed onboarding and optimization for 40+ SME seller accounts, delivering catalog setup, pricing strategy, and retention campaigns that lifted monthly sales by 30%.<br>
-                • Spearheaded client acquisition through 100+ cold calls and omnichannel outreach daily, successfully onboarding 20+ SME clients in one year.<br>
-                • Conducted competitive benchmarking and market research to lift brand visibility by 11%.<br>
-                • Trained and mentored new sales analysts via workshops, contributing to 15% YoY operational growth.<br>
-              </p>
-            </li>
+                        <li class="timeline-item">
+                            <h4 class="h4">Seagull Enterprises, India</h4>
+                            <h5 class="h5 timeline-item-title">Business Development Executive</h5>
+                            <span>Mar 2023 – Jun 2024</span>
+                            <p class="timeline-text">
+                                • Collaborated with digital marketing teams to drive 1.7x YoY lead growth via social and email campaigns.<br> • Managed onboarding and optimization for 40+ SME seller accounts, delivering catalog setup, pricing strategy,
+                                and retention campaigns that lifted monthly sales by 30%.<br> • Spearheaded client acquisition through 100+ cold calls and omnichannel outreach daily, successfully onboarding 20+ SME clients in one year.<br> • Conducted
+                                competitive benchmarking and market research to lift brand visibility by 11%.<br> • Trained and mentored new sales analysts via workshops, contributing to 15% YoY operational growth.<br>
+                            </p>
+                        </li>
 
-            <li class="timeline-item">
-              <h4 class="h4">Infuse Media B2B, India</h4>
-              <h5 class="h5 timeline-item-title">Lead Generation Executive</h5>
-              <span>Nov 2022 – Mar 2023</span>
-              <p class="timeline-text">
-                • Engaged C-suite stakeholders across US, Europe, and Middle East through tailored outreach, increasing lead generation by 20% and revenue by 15%.<br>
-                • Conducted structured 12-question performance marketing funnel calls, gathering insights to enhance CRM and pipeline tracking.<br>
-                • Streamlined Salesforce and HubSpot CRM processes, reducing the sales cycle by 10%.<br>
-                • Designed and delivered high-impact client pitches, securing 7+ HNI clients.<br>
-                • Conducted market research using Kantar and TF1, and executed outbound campaigns via Apollo.io.<br>
-              </p>
-            </li>
+                        <li class="timeline-item">
+                            <h4 class="h4">Infuse Media B2B, India</h4>
+                            <h5 class="h5 timeline-item-title">Lead Generation Executive</h5>
+                            <span>Nov 2022 – Mar 2023</span>
+                            <p class="timeline-text">
+                                • Engaged C-suite stakeholders across US, Europe, and Middle East through tailored outreach, increasing lead generation by 20% and revenue by 15%.<br> • Conducted structured 12-question performance marketing funnel calls,
+                                gathering insights to enhance CRM and pipeline tracking.<br> • Streamlined Salesforce and HubSpot CRM processes, reducing the sales cycle by 10%.<br> • Designed and delivered high-impact client pitches, securing 7+ HNI
+                                clients.
+                                <br> • Conducted market research using Kantar and TF1, and executed outbound campaigns via Apollo.io.<br>
+                            </p>
+                        </li>
 
-          </ol>
+                    </ol>
 
-        </section>
-        <section class="timeline">
+                </section>
+                <section class="timeline">
 
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
+                    <div class="title-wrapper">
+                        <div class="icon-box">
+                            <ion-icon name="book-outline"></ion-icon>
+                        </div>
 
-            <h3 class="h3">Education</h3>
-          </div>
+                        <h3 class="h3">Education</h3>
+                    </div>
 
-          <ol class="timeline-list">
+                    <ol class="timeline-list">
 
-            <li class="timeline-item">
-              <h4 class="h4">EDHEC Business School, France</h4>
-              <span>July 2024 - May 2025</span>
-              <p class="timeline-text">
-                Masters in Strategy, Organisation and Consulting
-              </p>
-            </li>
-          
-            <li class="timeline-item">
-              <h4 class="h4">Savitri Bai Phule Pune University, India</h4>
-              <span>April 2019 - April 2022</span>
-              <p class="timeline-text">
-                Bachelor of Business Administration (International Business)
-              </p>
-            </li>
-          
-          </ol>
-          
+                        <li class="timeline-item">
+                            <h4 class="h4">EDHEC Business School, France</h4>
+                            <span>July 2024 - December 2025</span>
+                            <p class="timeline-text">
+                                Masters in Strategy, Organisation and Consulting
+                            </p>
+                        </li>
 
-        </section>
-      </article>
+                        <li class="timeline-item">
+                            <h4 class="h4">Savitri Bai Phule Pune University, India</h4>
+                            <span>April 2019 - April 2022</span>
+                            <p class="timeline-text">
+                                Bachelor of Business Administration (International Business)
+                            </p>
+                        </li>
 
-      <article data-page="portfolio">
-        <header><h2 class="article-title">Portfolio</h2></header>
-        <section class="projects">
+                    </ol>
+                </section>
 
-          <ul class="filter-list">
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-            <li class="filter-item">
-              <button data-filter-btn>Marketing Strategy</button>
-            </li>
-            <li class="filter-item">
-              <button data-filter-btn>Consulting</button>
-            </li>
-            <li class="filter-item">
-              <button data-filter-btn>Business Development</button>
-            </li>
-          </ul>
-        
-          <div class="filter-select-box">
-            <button class="filter-select" data-select>
-              <div class="select-value" data-selecct-value>Select category</div>
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
+                <!-- CERTIFICATIONS SECTION -->
+                <section class="timeline">
+                    <div class="title-wrapper">
+                        <div class="icon-box">
+                            <ion-icon name="trophy-outline"></ion-icon>
+                        </div>
+                        <h3 class="h3">Certifications & Training</h3>
+                    </div>
+
+                    <ol class="timeline-list">
+                        <li class="timeline-item">
+                            <h4 class="h4">Microsoft Certified: Power BI Data Analyst</h4>
+                            <span>2024</span>
+                            <p class="timeline-text">
+                                Specialized in data modeling, visualization, and business intelligence analysis aligned with technical requirements.
+                            </p>
+                        </li>
+
+                        <li class="timeline-item">
+                            <h4 class="h4">Strategy Boost Program</h4>
+                            <span>2024</span>
+                            <p class="timeline-text">
+                                Developed advanced problem-solving and critical thinking skills using frameworks like MECE, HBPS, and the Pyramid Principle.
+                            </p>
+                        </li>
+                    </ol>
+                </section>
+                <br />
+                <!-- TOOLS & TECHNOLOGIES SECTION -->
+                <section class="skill">
+                    <div class="title-wrapper">
+                        <div class="icon-box">
+                            <ion-icon name="settings-outline"></ion-icon>
+                        </div>
+                        <h3 class="h3">Tools & Technologies</h3>
+                    </div>
+
+                    <div class="tools-grid content-card">
+                        <div class="tool-category">
+                            <h4 class="tool-category-title">CRM & Productivity</h4>
+                            <ul class="tool-list">
+                                <li class="tool-item">
+                                    <span class="tool-name">Salesforce</span>
+                                    <div class="tool-proficiency expert"></div>
+                                </li>
+                                <li class="tool-item">
+                                    <span class="tool-name">HubSpot</span>
+                                    <div class="tool-proficiency expert"></div>
+                                </li>
+                                <li class="tool-item">
+                                    <span class="tool-name">Sales Navigator</span>
+                                    <div class="tool-proficiency advanced"></div>
+                                </li>
+                                <li class="tool-item">
+                                    <span class="tool-name">Microsoft Office Suite</span>
+                                    <div class="tool-proficiency expert"></div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="tool-category">
+                            <h4 class="tool-category-title">Digital Marketing</h4>
+                            <ul class="tool-list">
+                                <li class="tool-item">
+                                    <span class="tool-name">Google Ads & Analytics</span>
+                                    <div class="tool-proficiency advanced"></div>
+                                </li>
+                                <li class="tool-item">
+                                    <span class="tool-name">Meta Business Suite</span>
+                                    <div class="tool-proficiency advanced"></div>
+                                </li>
+                                <li class="tool-item">
+                                    <span class="tool-name">Apollo.io</span>
+                                    <div class="tool-proficiency expert"></div>
+                                </li>
+                                <li class="tool-item">
+                                    <span class="tool-name">MailChimp</span>
+                                    <div class="tool-proficiency intermediate"></div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="tool-category">
+                            <h4 class="tool-category-title">Data & Research</h4>
+                            <ul class="tool-list">
+                                <li class="tool-item">
+                                    <span class="tool-name">Power BI</span>
+                                    <div class="tool-proficiency advanced"></div>
+                                </li>
+                                <li class="tool-item">
+                                    <span class="tool-name">Python</span>
+                                    <div class="tool-proficiency intermediate"></div>
+                                </li>
+                                <li class="tool-item">
+                                    <span class="tool-name">Statista</span>
+                                    <div class="tool-proficiency advanced"></div>
+                                </li>
+                                <li class="tool-item">
+                                    <span class="tool-name">Kantar & TF1</span>
+                                    <div class="tool-proficiency intermediate"></div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="tool-category">
+                            <h4 class="tool-category-title">Design & Creative</h4>
+                            <ul class="tool-list">
+                                <li class="tool-item">
+                                    <span class="tool-name">Adobe Creative Suite</span>
+                                    <div class="tool-proficiency intermediate"></div>
+                                </li>
+                                <li class="tool-item">
+                                    <span class="tool-name">Canva</span>
+                                    <div class="tool-proficiency advanced"></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <br />
+                <!-- LANGUAGES SECTION -->
+                <section class="skill">
+                    <div class="title-wrapper">
+                        <div class="icon-box">
+                            <ion-icon name="globe-outline"></ion-icon>
+                        </div>
+                        <h3 class="h3">Languages</h3>
+                    </div>
+
+                    <ul class="skills-list content-card">
+                        <li class="skills-item">
+                            <div class="title-wrapper">
+                                <h5 class="h5">English</h5>
+                                <data value="95">Native/Fluent</data>
+                            </div>
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-fill" style="width: 95%"></div>
+                            </div>
+                        </li>
+
+                        <li class="skills-item">
+                            <div class="title-wrapper">
+                                <h5 class="h5">French</h5>
+                                <data value="70">Intermediate</data>
+                            </div>
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-fill" style="width: 70%"></div>
+                            </div>
+                        </li>
+
+                        <li class="skills-item">
+                            <div class="title-wrapper">
+                                <h5 class="h5">German</h5>
+                                <data value="40">Beginner</data>
+                            </div>
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-fill" style="width: 40%"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+                <br />
+
+            </article>
+
+            <article data-page="portfolio">
+                <header>
+                    <h2 class="article-title">Portfolio</h2>
+                </header>
+                <section class="projects">
+
+                    <ul class="filter-list">
+                        <li class="filter-item">
+                            <button class="active" data-filter-btn>All</button>
+                        </li>
+                        <li class="filter-item">
+                            <button data-filter-btn>Consulting & Strategy</button>
+                        </li>
+                        <li class="filter-item">
+                            <button data-filter-btn>Sustainability & ESG</button>
+                        </li>
+                        <li class="filter-item">
+                            <button data-filter-btn>Luxury & Brand Strategy</button>
+                        </li>
+                        <li class="filter-item">
+                            <button data-filter-btn>Consumer Research & CRM</button>
+                        </li>
+                        <li class="filter-item">
+                            <button data-filter-btn>Data Analytics & Dashboards</button>
+                        </li>
+                    </ul>
+
+                    <div class="filter-select-box">
+                        <button class="filter-select" data-select>
+                <div class="select-value" data-selecct-value>Select category</div>
+                <div class="select-icon">
+                    <ion-icon name="chevron-down"></ion-icon>
+                </div>
             </button>
-            <ul class="select-list">
-              <li class="select-item"><button data-select-item>All</button></li>
-              <li class="select-item"><button data-select-item>Marketing Strategy</button></li>
-              <li class="select-item"><button data-select-item>Consulting</button></li>
-              <li class="select-item"><button data-select-item>Business Development</button></li>
-            </ul>
-          </div>
-        
-          <ul class="project-list">
-        
-            <li class="project-item active" data-filter-item data-category="Marketing Strategy">
-              <a href="#" target="_blank">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/project-5.png" alt="Dior CRM Project" loading="lazy" />
-                </figure>
-                <h3 class="project-title">Dior – CRM Re-Engagement and Segmentation</h3>
-                <p class="project-category">Marketing Strategy</p>
-              </a>
-            </li>
+                        <ul class="select-list">
+                            <li class="select-item"><button data-select-item>All</button></li>
+                            <li class="select-item"><button data-select-item>Consulting & Strategy</button></li>
+                            <li class="select-item"><button data-select-item>Sustainability & ESG</button></li>
+                            <li class="select-item"><button data-select-item>Luxury & Brand Strategy</button></li>
+                            <li class="select-item"><button data-select-item>Consumer Research & CRM</button></li>
+                            <li class="select-item"><button data-select-item>Data Analytics & Dashboards</button></li>
+                        </ul>
+                    </div>
 
-            <li class="project-item active" data-filter-item data-category="Marketing Strategy">
-              <a href="#" target="_blank">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/project-5.png" alt="Dior CRM Project" loading="lazy" />
-                </figure>
-                <h3 class="project-title">Dior – CRM Re-Engagement and Segmentation</h3>
-                <p class="project-category">Marketing Strategy</p>
-              </a>
-            </li>
+                    <ul class="project-list">
 
-            <li class="project-item active" data-filter-item data-category="Marketing Strategy">
-              <a href="#" target="_blank">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/project-5.png" alt="Dior CRM Project" loading="lazy" />
-                </figure>
-                <h3 class="project-title">Dior – CRM Re-Engagement and Segmentation</h3>
-                <p class="project-category">Marketing Strategy</p>
-              </a>
-            </li>
+                        <!-- Sustainability & ESG Projects -->
+                        <li class="project-item active" data-filter-item data-category="Sustainability & ESG">
+                            <a href="./assets/EDHEC Projects/PPT+Pitch+Valobat.pdf" target="_blank">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+                                    <img src="./assets/images/projects/Valobat_resized.png" alt="Valobat ESG Circular Construction Strategy" loading="lazy" />
+                                </figure>
+                                <h3 class="project-title">Valobat – ESG Innovation Strategy for Circular Construction</h3>
+                                <p class="project-category">Sustainability & ESG</p>
+                            </a>
+                        </li>
 
-            <li class="project-item active" data-filter-item data-category="Marketing Strategy">
-              <a href="#" target="_blank">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/project-5.png" alt="Dior CRM Project" loading="lazy" />
-                </figure>
-                <h3 class="project-title">Dior – CRM Re-Engagement and Segmentation</h3>
-                <p class="project-category">Marketing Strategy</p>
-              </a>
-            </li>
+                        <li class="project-item active" data-filter-item data-category="Sustainability & ESG">
+                            <a href="./assets/EDHEC Projects/Saket Palaskar Marketing project TYBBA IB 22 New-converted.pdf" target="_blank">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+                                    <img src="./assets/images/projects/Sap_resized.png" alt="SAP FMCG Carbon-Linked Pricing Simulation" loading="lazy" />
+                                </figure>
+                                <h3 class="project-title">FMCG Carbon-Linked Pricing & Logistics Simulation – SAP Sustainability Case</h3>
+                                <p class="project-category">Sustainability & ESG</p>
+                            </a>
+                        </li>
 
-            <li class="project-item active" data-filter-item data-category="Marketing Strategy">
-              <a href="#" target="_blank">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/project-5.png" alt="Dior CRM Project" loading="lazy" />
-                </figure>
-                <h3 class="project-title">Dior – CRM Re-Engagement and Segmentation</h3>
-                <p class="project-category">Marketing Strategy</p>
-              </a>
-            </li>
+                        <!-- Consulting & Strategy Projects -->
+                        <li class="project-item active" data-filter-item data-category="Consulting & Strategy">
+                            <a href="./assets/EDHEC Projects/SiaPartnerspptx.pdf" target="_blank">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+                                    <img src="./assets/images/projects/Sia parterns_resized.png" alt="PowerPeel Plug Berry Post-Merger Strategy" loading="lazy" />
+                                </figure>
+                                <h3 class="project-title">Post-Merger Strategy Design – PowerPeel & Plug Berry (Sia Partners)</h3>
+                                <p class="project-category">Consulting & Strategy</p>
+                            </a>
+                        </li>
 
-            <li class="project-item active" data-filter-item data-category="Marketing Strategy">
-              <a href="#" target="_blank">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/project-5.png" alt="Dior CRM Project" loading="lazy" />
-                </figure>
-                <h3 class="project-title">Dior – CRM Re-Engagement and Segmentation</h3>
-                <p class="project-category">Marketing Strategy</p>
-              </a>
-            </li>
+                        <li class="project-item active" data-filter-item data-category="Consulting & Strategy">
+                            <a href="./assets/EDHEC Projects/Risk_Management.pdf" target="_blank">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+                                    <img src="./assets/images/projects/Risk management_resized.png" alt="PowerPeel Plug Berry Post-Merger Strategy" loading="lazy" />
+                                </figure>
+                                <h3 class="project-title">Taylor’s Wedding – Strategic Risk Management Plan</h3>
+                                <p class="project-category">Consulting & Strategy</p>
+                            </a>
+                        </li>
 
-            <li class="project-item active" data-filter-item data-category="Marketing Strategy">
-              <a href="#" target="_blank">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/project-5.png" alt="Dior CRM Project" loading="lazy" />
-                </figure>
-                <h3 class="project-title">Dior – CRM Re-Engagement and Segmentation</h3>
-                <p class="project-category">Marketing Strategy</p>
-              </a>
-            </li>
+                        <li class="project-item active" data-filter-item data-category="Consulting & Strategy">
+                            <a href="./assets/EDHEC Projects/Team07_Kering_M&A+AND+CORPORATE+STRATEGY.pdf" target="_blank">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+                                    <img src="./assets/images/projects/Kerring_resized.png" alt="Kering Global Luxury M&A Synergy Model" loading="lazy" />
+                                </figure>
+                                <h3 class="project-title">Global Luxury M&A Synergy Model – Kering Corporate Strategy Analysis</h3>
+                                <p class="project-category">Consulting & Strategy</p>
+                            </a>
+                        </li>
 
-            <li class="project-item active" data-filter-item data-category="Marketing Strategy">
-              <a href="#" target="_blank">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/project-5.png" alt="Dior CRM Project" loading="lazy" />
-                </figure>
-                <h3 class="project-title">Dior – CRM Re-Engagement and Segmentation</h3>
-                <p class="project-category">Marketing Strategy</p>
-              </a>
-            </li>
+                        <li class="project-item active" data-filter-item data-category="Consulting & Strategy">
+                            <a href="./assets/EDHEC Projects/Apigee Pizfer .pdf" target="_blank">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+                                    <img src="./assets/images/projects/ChatGPT20Jul202025,20PM_resized.png" alt="Pfizer Vaccine Deployment Strategy Capgemini" loading="lazy" />
+                                </figure>
+                                <h3 class="project-title">AI-Powered Vaccine Deployment Strategy – Capgemini x Pfizer (Apigee)</h3>
+                                <p class="project-category">Consulting & Strategy</p>
+                            </a>
+                        </li>
 
-            <li class="project-item active" data-filter-item data-category="Marketing Strategy">
-              <a href="#" target="_blank">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/project-5.png" alt="Dior CRM Project" loading="lazy" />
-                </figure>
-                <h3 class="project-title">Dior – CRM Re-Engagement and Segmentation</h3>
-                <p class="project-category">Marketing Strategy</p>
-              </a>
-            </li>
+                        <li class="project-item active" data-filter-item data-category="Consulting & Strategy">
+                            <a href="./assets/EDHEC Projects/Aliiancy .pdf" target="_blank">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+                                    <img src="./assets/images/projects/Aliiancy_resized.png" alt="ESG Reporting Strategy Aliiancy Fortuny" loading="lazy" />
+                                </figure>
+                                <h3 class="project-title">ESG Reporting Strategy – Aliiancy x Fortuny Asset Management</h3>
+                                <p class="project-category">Consulting & Strategy</p>
+                            </a>
+                        </li>
 
-            <li class="project-item active" data-filter-item data-category="Marketing Strategy">
-              <a href="#" target="_blank">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/project-5.png" alt="Dior CRM Project" loading="lazy" />
-                </figure>
-                <h3 class="project-title">Dior – CRM Re-Engagement and Segmentation</h3>
-                <p class="project-category">Marketing Strategy</p>
-              </a>
-            </li>
+                        <li class="project-item active" data-filter-item data-category="Consulting & Strategy">
+                            <a href="./assets/EDHEC Projects/AMAZON operation strategies .pdf" target="_blank">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+                                    <img src="./assets/images/projects/Amazon_resized.png" alt="Amazon Regulatory Risk Mitigation Playbook" loading="lazy" />
+                                </figure>
+                                <h3 class="project-title">Regulatory Risk Mitigation Playbook – Amazon Antitrust Strategy</h3>
+                                <p class="project-category">Consulting & Strategy</p>
+                            </a>
+                        </li>
 
-            <li class="project-item active" data-filter-item data-category="Marketing Strategy">
-              <a href="#" target="_blank">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/project-5.png" alt="Dior CRM Project" loading="lazy" />
-                </figure>
-                <h3 class="project-title">Dior – CRM Re-Engagement and Segmentation</h3>
-                <p class="project-category">Marketing Strategy</p>
-              </a>
-            </li>
+                        <li class="project-item active" data-filter-item data-category="Consulting & Strategy">
+                            <a href="./assets/EDHEC Projects/IT Strategy .pdf" target="_blank">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+                                    <img src="./assets/images/projects/Gartner project_resized.png" alt="Apigee Cultural Leadership Framework" loading="lazy" />
+                                </figure>
+                                <h3 class="project-title">Cultural Leadership Framework – Apigee Organizational Analysis</h3>
+                                <p class="project-category">Consulting & Strategy</p>
+                            </a>
+                        </li>
 
-            <li class="project-item active" data-filter-item data-category="Marketing Strategy">
-              <a href="#" target="_blank">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/project-5.png" alt="Dior CRM Project" loading="lazy" />
-                </figure>
-                <h3 class="project-title">Dior – CRM Re-Engagement and Segmentation</h3>
-                <p class="project-category">Marketing Strategy</p>
-              </a>
-            </li>
+                        <li class="project-item active" data-filter-item data-category="Consulting & Strategy">
+                            <a href="./assets/EDHEC Projects/Bearing point Cancer .pdf" target="_blank">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+                                    <img src="./assets/images/projects/Apigee_resized (1).png" alt="AI Cancer Detection BearingPoint" loading="lazy" />
+                                </figure>
+                                <h3 class="project-title">AI-Driven Early Cancer Detection Tool – BearingPoint Innovation Case</h3>
+                                <p class="project-category">Consulting & Strategy</p>
+                            </a>
+                        </li>
 
-            <li class="project-item active" data-filter-item data-category="Marketing Strategy">
-              <a href="#" target="_blank">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/project-5.png" alt="Dior CRM Project" loading="lazy" />
-                </figure>
-                <h3 class="project-title">Dior – CRM Re-Engagement and Segmentation</h3>
-                <p class="project-category">Marketing Strategy</p>
-              </a>
-            </li>
+                        <li class="project-item active" data-filter-item data-category="Consulting & Strategy">
+                            <a href="./assets/EDHEC Projects/Danone_Team07_CohortA.pdf" target="_blank">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+                                    <img src="./assets/images/projects/Danone_resized.png" alt="Danone Ahold M&A Strategic Playbook" loading="lazy" />
+                                </figure>
+                                <h3 class="project-title">Strategic M&A Playbook – Danone vs Ahold (Sia Partners)</h3>
+                                <p class="project-category">Consulting & Strategy</p>
+                            </a>
+                        </li>
 
-            <li class="project-item active" data-filter-item data-category="Marketing Strategy">
-              <a href="#" target="_blank">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/project-5.png" alt="Dior CRM Project" loading="lazy" />
-                </figure>
-                <h3 class="project-title">Dior – CRM Re-Engagement and Segmentation</h3>
-                <p class="project-category">Marketing Strategy</p>
-              </a>
-            </li>
+                        <!-- Luxury & Brand Strategy Projects -->
+                        <li class="project-item active" data-filter-item data-category="Luxury & Brand Strategy">
+                            <a href="./assets/EDHEC Projects/Ferarri x Belmond.pdf" target="_blank">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+                                    <img src="./assets/images/projects/BelmondxFerrari_resized.png" alt="Ferrari Belmond F1 Hospitality Sponsorship" loading="lazy" />
+                                </figure>
+                                <h3 class="project-title">Ferrari x Belmond – F1 Hospitality Sponsorship Activation</h3>
+                                <p class="project-category">Luxury & Brand Strategy</p>
+                            </a>
+                        </li>
 
-            <li class="project-item active" data-filter-item data-category="Marketing Strategy">
-              <a href="#" target="_blank">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/project-5.png" alt="Dior CRM Project" loading="lazy" />
-                </figure>
-                <h3 class="project-title">Dior – CRM Re-Engagement and Segmentation</h3>
-                <p class="project-category">Marketing Strategy</p>
-              </a>
-            </li>
+                        <li class="project-item active" data-filter-item data-category="Luxury & Brand Strategy">
+                            <a href="./assets/EDHEC Projects/SaketPalaskar_+Real+Madrid+FC+(1).pdf" target="_blank">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+                                    <img src="./assets/images/projects/rmf.png" alt="Ferrari Belmond F1 Hospitality Sponsorship" loading="lazy" />
+                                </figure>
+                                <h3 class="project-title">Yeezy x Real Madrid FC – Luxury Streetwear Capsule Launch</h3>
+                                <p class="project-category">Luxury & Brand Strategy</p>
+                            </a>
+                        </li>
 
-            <li class="project-item active" data-filter-item data-category="Marketing Strategy">
-              <a href="#" target="_blank">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/project-5.png" alt="Dior CRM Project" loading="lazy" />
-                </figure>
-                <h3 class="project-title">Dior – CRM Re-Engagement and Segmentation</h3>
-                <p class="project-category">Marketing Strategy</p>
-              </a>
-            </li>
+                        <li class="project-item active" data-filter-item data-category="Luxury & Brand Strategy">
+                            <a href="./assets/EDHEC Projects/Inside Sports Industry Aston martin X Roger Fedrer.pdf" target="_blank">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+                                    <img src="./assets/images/projects/RFxAM_resized.png" alt="Aston Martin Roger Federer Luxury Sponsorship" loading="lazy" />
+                                </figure>
+                                <h3 class="project-title">Luxury Sponsorship Activation Plan – Aston Martin x Roger Federer</h3>
+                                <p class="project-category">Luxury & Brand Strategy</p>
+                            </a>
+                        </li>
 
-            <li class="project-item active" data-filter-item data-category="Marketing Strategy">
-              <a href="#" target="_blank">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/project-5.png" alt="Dior CRM Project" loading="lazy" />
-                </figure>
-                <h3 class="project-title">Dior – CRM Re-Engagement and Segmentation</h3>
-                <p class="project-category">Marketing Strategy</p>
-              </a>
-            </li>
+                        <li class="project-item active" data-filter-item data-category="Luxury & Brand Strategy">
+                            <a href="./assets/EDHEC Projects/Operation strategies.pdf" target="_blank">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+                                    <img src="./assets/images/projects/Operation Startegy Hitel_resized.png" alt="Hotel du Cap-Eden-Roc AI Hospitality Innovation" loading="lazy" />
+                                </figure>
+                                <h3 class="project-title">AI-Driven Hospitality Innovation – Hotel du Cap-Eden-Roc</h3>
+                                <p class="project-category">Luxury & Brand Strategy</p>
+                            </a>
+                        </li>
 
-            
-        
-            <li class="project-item active" data-filter-item data-category="Consulting">
-              <a href="#" target="_blank">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/project-1.jpg" alt="Kering Growth Project" loading="lazy" />
-                </figure>
-                <h3 class="project-title">Kering – Brand Portfolio Growth Strategy</h3>
-                <p class="project-category">Consulting</p>
-              </a>
-            </li>
-        
-            <li class="project-item active" data-filter-item data-category="Marketing Strategy">
-              <a href="#" target="_blank">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/project-2.png" alt="Ferrari x Belmond" loading="lazy" />
-                </figure>
-                <h3 class="project-title">Ferrari x Belmond – Co-Branded Content and Event Strategy</h3>
-                <p class="project-category">Marketing Strategy</p>
-              </a>
-            </li>
-        
-            <li class="project-item active" data-filter-item data-category="Consulting">
-              <a href="#" target="_blank">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/project-3.jpg" alt="Nike Go-To-Market" loading="lazy" />
-                </figure>
-                <h3 class="project-title">Nike – Go-To-Market Strategy for International Launch</h3>
-                <p class="project-category">Consulting</p>
-              </a>
-            </li>
-        
-            <li class="project-item active" data-filter-item data-category="Business Development">
-              <a href="#" target="_blank">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/project-4.png" alt="Winners Farmers Project" loading="lazy" />
-                </figure>
-                <h3 class="project-title">Winners Farmers Pvt Ltd – B2B Business Development</h3>
-                <p class="project-category">Business Development</p>
-              </a>
-            </li>
-        
-          </ul>
-        
-        </section>
-        
-        
-      </article>
+                        <!-- Consumer Research & CRM Projects -->
+                        <li class="project-item active" data-filter-item data-category="Consumer Research & CRM">
+                            <a href="./assets/EDHEC Projects/MARKETING+INTELLIGENCE+FOR+LUXURY+Assignment+_Saket_+Yu-Han.pdf" target="_blank">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+                                    <img src="./assets/images/projects/dior_resized.png" alt="Miss Dior Lapsed User Research Segmentation" loading="lazy" />
+                                </figure>
+                                <h3 class="project-title">Miss Dior Lapsed User Research & Segmentation – Dior (Luxury Intelligence)</h3>
+                                <p class="project-category">Consumer Research & CRM</p>
+                            </a>
+                        </li>
 
-      <article data-page="contact">
-        <header><h2 class="article-title">Contact</h2></header>
-        <section data-form-section>
-          <form class="form" data-form>
-            <input type="text" name="name" placeholder="Your Name" required data-form-input />
-            <input type="email" name="email" placeholder="Your Email" required data-form-input />
-            <textarea name="subject" placeholder="Your Message" required data-form-input></textarea>
-            <textarea name="message" placeholder="Your Message" required data-form-input></textarea>
-            <button class="form-btn" data-form-btn disabled type="submit">
-              <ion-icon name="paper-plane"></ion-icon><span>Send</span>
-            </button>
-          </form>          
-        </section>        
-      </article>
-    </div>
-  </main>
+                        <li class="project-item active" data-filter-item data-category="Consumer Research & CRM">
+                            <a href="./assets/EDHEC Projects/BBA thesis.pdf" target="_blank">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+                                    <img src="./assets/images/projects/Thesis_resized.png" alt="Winners Farmers Consumer Behavior Agri-Marketing" loading="lazy" />
+                                </figure>
+                                <h3 class="project-title">Consumer Behavior & Agri-Marketing Study – Winners Farmers Pvt. Ltd.</h3>
+                                <p class="project-category">Consumer Research & CRM</p>
+                            </a>
+                        </li>
 
-  <!-- Ionicons -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+                        <!-- Data Analytics & Dashboards Projects -->
+                        <li class="project-item active" data-filter-item data-category="Data Analytics & Dashboards">
+                            <a href="./assets/EDHEC Projects/Brussels airlines tableau .pdf" target="_blank">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+                                    <img src="./assets/images/projects/Brussels airlines_resized.png" alt="Brussels Airlines Flight Demand Booking Optimization" loading="lazy" />
+                                </figure>
+                                <h3 class="project-title">Flight Demand & Booking Optimization – Brussels Airlines (Tableau Dashboard)</h3>
+                                <p class="project-category">Data Analytics & Dashboards</p>
+                            </a>
+                        </li>
 
-  <!-- Your JavaScript -->
-  <script src="./assets/js/script.js"></script>
+                        <li class="project-item active" data-filter-item data-category="Data Analytics & Dashboards">
+                            <a href="./assets/EDHEC Projects/Global star tableau .pdf" target="_blank">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+                                    <img src="./assets/images/projects/Global_Sales_Dashboard_Lightened_resized.jpg" alt="Superstore Global Sales Dashboard Regional Trends" loading="lazy" />
+                                </figure>
+                                <h3 class="project-title">Global Sales Dashboard & Regional Trends – Superstore (Tableau Analysis)</h3>
+                                <p class="project-category">Data Analytics & Dashboards</p>
+                            </a>
+                        </li>
+
+                        <li class="project-item active" data-filter-item data-category="Data Analytics & Dashboards">
+                            <a href="./assets/EDHEC Projects/powerbireport2.pdf" target="_blank">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+                                    <img src="./assets/images/projects/power Bi_resized.png" alt="GlobalStore Cross-Region Sales Cohort Retention" loading="lazy" />
+                                </figure>
+                                <h3 class="project-title">Cross-Region Sales Cohort & Retention Strategy – GlobalStore (Power BI)</h3>
+                                <p class="project-category">Data Analytics & Dashboards</p>
+                            </a>
+                        </li>
+
+                        <li class="project-item active" data-filter-item data-category="Data Analytics & Dashboards">
+                            <a href="./assets/EDHEC Projects/SaketPalaskar_+Real+Madrid+FC+(1).pdf" target="_blank">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+                                    <img src="./assets/images/projects/happiness.png" alt="Global Happiness Index ML Regression Prediction" loading="lazy" />
+                                </figure>
+                                <h3 class="project-title">Global Happiness Index Prediction – ML Regression Models</h3>
+                                <p class="project-category">Data Analytics & Dashboards</p>
+                            </a>
+                        </li>
+
+                        <li class="project-item active" data-filter-item data-category="Data Analytics & Dashboards">
+                            <a href="./assets/EDHEC Projects/Risk_Management.pdf" target="_blank">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+                                    <img src="./assets/images/projects/Air passanger_resized - Copy.png" alt="Air Travel Time Series Forecast Seasonal" loading="lazy" />
+                                </figure>
+                                <h3 class="project-title">Air Travel Time Series Forecast – Seasonal Decomposition</h3>
+                                <p class="project-category">Data Analytics & Dashboards</p>
+                            </a>
+                        </li>
+
+                    </ul>
+
+
+
+                </section>
+
+            </article>
+
+            <article data-page="contact">
+                <header>
+                    <h2 class="article-title">Get In Touch</h2>
+                    <p class="contact-subtitle">Let's collaborate and bring your vision to life</p>
+                </header>
+
+                <section class="contact-intro">
+                    <div class="contact-cards">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <ion-icon name="mail-outline"></ion-icon>
+                            </div>
+                            <h4>Email Me</h4>
+                            <p>Drop me a line anytime</p>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <ion-icon name="chatbubble-outline"></ion-icon>
+                            </div>
+                            <h4>Let's Chat</h4>
+                            <p>Quick response guaranteed</p>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <ion-icon name="rocket-outline"></ion-icon>
+                            </div>
+                            <h4>Start Project</h4>
+                            <p>Ready to begin immediately</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section data-form-section class="enhanced-form-section">
+                    <div class="form-header">
+                        <h3 class="form-title">Send Me a Message</h3>
+                        <p class="form-description">I'll get back to you within 24 hours</p>
+                    </div>
+
+                    <form class="form enhanced-form" data-form>
+                        <div class="input-group">
+                            <div class="input-wrapper">
+                                <ion-icon name="person-outline" class="input-icon"></ion-icon>
+                                <input type="text" name="name" placeholder="Your Full Name" required data-form-input class="styled-input" />
+                                <span class="input-highlight"></span>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <div class="input-wrapper">
+                                <ion-icon name="mail-outline" class="input-icon"></ion-icon>
+                                <input type="email" name="email" placeholder="your.email@domain.com" required data-form-input class="styled-input" />
+                                <span class="input-highlight"></span>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <div class="input-wrapper">
+                                <ion-icon name="document-text-outline" class="input-icon"></ion-icon>
+                                <input type="text" name="subject" placeholder="Project Subject / Topic" required data-form-input class="styled-input" />
+                                <span class="input-highlight"></span>
+                            </div>
+                        </div>
+
+                        <div class="input-group full-width">
+                            <div class="textarea-wrapper">
+                                <ion-icon name="chatbubbles-outline" class="input-icon"></ion-icon>
+                                <textarea name="message" placeholder="Tell me about your project, goals, timeline, and how I can help you achieve success..." required data-form-input class="styled-textarea"></textarea>
+                                <span class="input-highlight"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-footer">
+                            <button class="form-btn enhanced-btn" data-form-btn disabled type="submit">
+                    <span class="btn-content">
+                        <ion-icon name="paper-plane"></ion-icon>
+                        <span class="btn-text">Send Message</span>
+                    </span>
+                    <div class="btn-ripple"></div>
+                </button>
+                            <p class="privacy-note">
+                                <ion-icon name="shield-checkmark-outline"></ion-icon>
+                                Your information is secure and confidential
+                            </p>
+                        </div>
+                    </form>
+                </section>
+
+                <section class="contact-footer">
+                    <div class="response-time">
+                        <ion-icon name="time-outline"></ion-icon>
+                        <span>Average response time: <strong>4 hours</strong></span>
+                    </div>
+                </section>
+            </article>
+
+        </div>
+    </main>
+
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- Your JavaScript -->
+    <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
