@@ -179,12 +179,25 @@ article {
     --ionicon-stroke-width: 35px;
 }
 
-article {
-    display: none;
+main article {
+    display: none !important;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
 }
 
-article.active {
-    display: block;
+
+/* Only show the active article */
+
+main article.active {
+    display: block !important;
+    visibility: visible;
+    opacity: 1;
+    position: relative;
+    top: auto;
+    left: auto;
     animation: fade 0.5s ease backwards;
 }
 
@@ -227,7 +240,8 @@ article.active {
     padding-bottom: 7px;
 }
 
-.article-title::after {
+
+/* .article-title::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -236,7 +250,7 @@ article.active {
     height: 3px;
     background: var(--bg-gradient-yellow-1);
     border-radius: 3px;
-}
+} */
 
 
 /* Scrollbar styling */
@@ -288,7 +302,8 @@ article.active {
 
 main {
     margin: 15px 12px;
-    margin-bottom: 75px;
+    margin-bottom: 100px;
+    /* Increased from 75px */
     min-width: 259px;
     color: black;
 }
@@ -1662,7 +1677,12 @@ article[data-page="contact"] {
     width: 100%;
     text-align: center;
     padding-top: 60px;
-    /* Fix for navbar overlap */
+    padding-bottom: 60px;
+    /* Added bottom padding */
+    min-height: 100vh;
+    /* Ensures full viewport height */
+    margin-bottom: 0;
+    /* Prevents double spacing */
 }
 
 
@@ -1982,6 +2002,7 @@ textarea.form-input::-webkit-resizer {
 }
 
 .contact-footer {
+    margin: auto;
     text-align: center;
     margin-top: 30px;
     padding: 20px;
@@ -2058,7 +2079,7 @@ textarea.form-input::-webkit-resizer {
 }
 
 .service-modal-close {
-    position: absolute;
+    position: fixed;
     top: 15px;
     right: 15px;
     background: var(--onyx);
@@ -2471,6 +2492,7 @@ section[data-form-section] .privacy-note ion-icon {
         padding-bottom: 15px;
     }
     .article-title::after {
+        margin-top: 0%;
         width: 40px;
         height: 5px;
     }
@@ -2543,8 +2565,18 @@ section[data-form-section] .privacy-note ion-icon {
    * #NAVBAR
    */
     .navbar {
-        border-radius: 20px 20px 0 0;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
         background: var(--bg-gradient-navbar-light);
+        backdrop-filter: blur(10px);
+        border: 1px solid var(--jet);
+        border-radius: 12px 12px 0 0;
+        box-shadow: var(--shadow-2);
+        z-index: 5;
+        height: 70px;
+        /* Added fixed height */
     }
     .navbar-list {
         gap: 20px;
@@ -2825,7 +2857,7 @@ section[data-form-section] .privacy-note ion-icon {
         padding: 0 20px;
     }
     .service-modal {
-        width: 95vw;
+        width: 55vw;
         margin: 20px;
     }
     .service-modal-content {
@@ -2893,8 +2925,10 @@ section[data-form-section] .privacy-note ion-icon {
     }
     .main-content {
         position: relative;
-        width: max-content;
-        margin: auto;
+        width: 100%;
+        min-height: 100vh;
+        overflow: hidden;
+        /* Prevent hidden articles from affecting layout */
     }
     /**
    * NAVBAR
@@ -3019,7 +3053,11 @@ section[data-form-section] .privacy-note ion-icon {
         color: black;
     }
     article {
-        min-height: 100%;
+        display: none;
+        /* min-height: auto;
+        margin-bottom: 30px;
+        padding-bottom: 40px;
+        Extra padding at bottom */
     }
     /**
    * MAIN
