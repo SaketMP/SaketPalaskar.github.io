@@ -35,6 +35,55 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+    <!-- Download Resume button styles -->
+    <style>
+        .resume-header {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .resume-header .article-title {
+            margin-bottom: 0;
+        }
+
+        .resume-download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            border-radius: 14px;
+            background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+            color: #fff;
+            font-size: var(--fs-6);
+            font-weight: var(--fw-500);
+            text-decoration: none;
+            box-shadow: var(--shadow-2);
+            transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
+        }
+
+        .resume-download-btn ion-icon {
+            font-size: 18px;
+        }
+
+        .resume-download-btn:hover,
+        .resume-download-btn:focus-visible {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-4);
+            opacity: 0.95;
+        }
+
+        @media (max-width: 580px) {
+            .resume-download-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+
 </head>
 
 <body>
@@ -225,8 +274,13 @@
             </article>
 
             <article data-page="resume">
-                <header>
+                <header class="resume-header">
                     <h2 class="h2 article-title">📝 Resume</h2>
+                    <!-- Download Resume button: put the PDF at assets/resume/Saket_Palaskar_Resume.pdf -->
+                    <a href="./assets/resume/Saket_Palaskar_Resume.pdf" download="Saket_Palaskar_Resume.pdf" class="resume-download-btn" target="_blank" rel="noopener">
+                        <ion-icon name="download-outline"></ion-icon>
+                        <span>Download Resume</span>
+                    </a>
                 </header>
                 <section class="timeline">
 
